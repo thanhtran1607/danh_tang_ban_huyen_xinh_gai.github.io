@@ -7,11 +7,11 @@
     <title>Quà dành tặng bạn Huyền</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <div>
+  <body>
     <div class="container">
         <canvas id="pinkboard"></canvas>
         <div styles='display: flex,text-alain'>
-        <p class="text-render">I love you</p>
+        <p class="text-render">i love you</p>
         <p class="text-render">Huyền xinh gái</p>
         </div>
       <div class="heart"></div>
@@ -45,6 +45,28 @@
         });
       }
 
+
+    document.addEventListener("mousemove", function(e){
+
+    let body = document.querySelector('body')
+    let flyheart = document.createElement('span');
+    let x = e.clientX;
+    let y = e.clientY;
+
+    flyheart.style.left = x + 'px';
+    flyheart.style.top = y + 'px';
+    let size = Math.random() * 80;
+    flyheart.style.width = 20 + size + 'px';
+    flyheart.style.height = 20 + size + 'px';
+
+    let transformValue = Math.random() * 360;
+    flyheart.style.transform = 'rotate(' + transformValue + 'deg)';
+    body.appendChild(flyheart);
+
+    setTimeout(function(){
+        flyheart.remove();
+    },1000)
+    })
       animateHearts();
     </script>
     <script src="head.js"></script>

@@ -363,7 +363,7 @@ var settings = {
   
       // create the fill
   
-      context.fillStyle = '#fff';
+      context.fillStyle = '#e4ac43';
   
       context.fill();
   
